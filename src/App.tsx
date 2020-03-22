@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { store } from './store';
 import { Provider } from 'react-redux';
+import ReduxHooksComponent from './ReduxHooksComponent';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
           >
             Learn React
           </a>
+          <ReduxHooksComponent />
         </header>
       </div>
     </Provider>
