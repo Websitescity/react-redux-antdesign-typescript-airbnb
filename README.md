@@ -1,44 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logo](./logo.png)
 
-## Available Scripts
+# React Redux Antdesign Typescript Airbnb
 
-In the project directory, you can run:
+## To start project:
+
+Please check if you have `yarn` installed globally
+
+Clone project
+
+### `git clone git@github.com:Websitescity/react-redux-antdesign-typescript-airbnb.git`
+
+Go to the directory
+
+### `cd react-redux-antdesign-typescript-airbnb`
+
+Download dependencies
+
+### `yarn`
+
+Start project
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+Materials:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[React-Redux Hooks with Typescript in 2020](https://codersera.com/blog/react-redux-hooks-with-typescript/)
 
-### `yarn build`
+[Ant Design with Typescript](https://ant.design/docs/react/use-in-typescript)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[How to setup a React.JS Project with TypeScript, ESLint and Prettier](https://dev.to/renatobentorocha/how-to-setup-a-react-js-project-with-typcript-eslint-and-prettier-8mn)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Important commits:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Add Prettier with Airbnb standard](https://github.com/Websitescity/react-redux-antdesign-typescript-airbnb/commit/c955a18c88f943710176965bdead4db0310097d1)
 
-### `yarn eject`
+[Add Ant Design 4](https://github.com/Websitescity/react-redux-antdesign-typescript-airbnb/commit/2c5d5df462acc52c846428b11e7189503c26fde3)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Add store](https://github.com/Websitescity/react-redux-antdesign-typescript-airbnb/commit/b80ef15311c5d4d268844ecdabf14417f45322fc)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Add example of useState, useSelector and useDispatch](https://github.com/Websitescity/react-redux-antdesign-typescript-airbnb/commit/51499695734e0880902d296201f557976190c635)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Author:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![mr](https://michalrafalski.com/img/michalrafalski.ee11db8e.png)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Michał Rafalski](https://michalrafalski.com/)
