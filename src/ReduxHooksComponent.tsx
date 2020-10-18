@@ -1,8 +1,13 @@
-import React, { ChangeEvent, useState } from 'react';
-import { Form, Input, Card, Button, Row, Col } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
-import { InitialState } from './store/root-reducer';
-import { deleteAddress, deleteName, updateAddress, updateName } from './store/root-redux';
+import React, { ChangeEvent, useState } from "react";
+import { Form, Input, Card, Button, Row, Col } from "antd";
+import { useDispatch, useSelector } from "react-redux";
+import { InitialState } from "./store/root-reducer";
+import {
+  deleteAddress,
+  deleteName,
+  updateAddress,
+  updateName
+} from "./store/root-redux";
 
 interface Props {}
 
@@ -20,7 +25,7 @@ const ReduxHooksComponent: React.FC<Props> = () => {
     (state: InitialState) => {
       return {
         name: state.name,
-        address: state.address,
+        address: state.address
       };
     }
   );
@@ -41,7 +46,7 @@ const ReduxHooksComponent: React.FC<Props> = () => {
                   dispatch(updateName(e.target.value));
                 }}
               />
-              <Button onClick={()=>dispatch(deleteName)}>Delete name</Button>
+              <Button onClick={() => dispatch(deleteName)}>Delete name</Button>
             </Form.Item>
             <Form.Item label="Address">
               <Input
@@ -52,7 +57,7 @@ const ReduxHooksComponent: React.FC<Props> = () => {
                   dispatch(updateAddress(e.target.value));
                 }}
               />
-              <Button onClick={()=>dispatch(deleteAddress)}>
+              <Button onClick={() => dispatch(deleteAddress)}>
                 Delete address
               </Button>
             </Form.Item>
@@ -64,7 +69,7 @@ const ReduxHooksComponent: React.FC<Props> = () => {
           <pre>
             {JSON.stringify({
               name,
-              address,
+              address
             })}
           </pre>
         </Card>
@@ -81,7 +86,7 @@ const ReduxHooksComponent: React.FC<Props> = () => {
                   setAge(e.target.value);
                 }}
               />
-              <Button onClick={() => setAge('')}>Delete age</Button>
+              <Button onClick={() => setAge("")}>Delete age</Button>
             </Form.Item>
           </Form>
         </Card>
@@ -90,7 +95,7 @@ const ReduxHooksComponent: React.FC<Props> = () => {
         <Card title="Preview local state">
           <pre>
             {JSON.stringify({
-              age,
+              age
             })}
           </pre>
         </Card>

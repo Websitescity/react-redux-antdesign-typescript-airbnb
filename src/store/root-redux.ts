@@ -1,11 +1,17 @@
-import { ActionType } from './root-reducer';
+import { ActionType } from "./root-reducer";
 
-  const updateName = (name: string) => ({ type: ActionType.UpdateName, payload: { name } });
+const updateName = (name: string) => ({
+  type: ActionType.UpdateName,
+  payload: { name }
+});
 
-  const updateAddress = (address: string) =>({ type: ActionType.UpdateAddress, payload: { address } });
+const updateAddress = (address: string) => ({
+  type: ActionType.UpdateAddress,
+  payload: { address }
+});
 
-  const deleteName = () =>({ type: ActionType.DeleteName, payload: {} });
+const deleteName = () => ({ type: ActionType.DeleteName, payload: {} });
 
-  const deleteAddress = () =>({ type: ActionType.DeleteAddress, payload: {} });
+const deleteAddress = () => ({ type: ActionType.DeleteAddress, payload: {} });
 
-  export {updateName, updateAddress, deleteName, deleteAddress}
+export { updateName, updateAddress, deleteName, deleteAddress };
