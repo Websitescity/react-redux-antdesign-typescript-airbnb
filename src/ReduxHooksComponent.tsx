@@ -1,7 +1,8 @@
 import React, { ChangeEvent, useState } from 'react';
 import { Form, Input, Card, Button, Row, Col } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
-import { InitialState, RootDispatcher } from './store/root-reducer';
+import { InitialState } from './store/root-reducer';
+import { deleteAddress, deleteName, updateAddress, updateName } from './store/root-redux';
 
 interface Props {}
 
@@ -25,7 +26,6 @@ const ReduxHooksComponent: React.FC<Props> = () => {
   );
 
   const dispatch = useDispatch();
-  const rootDispatcher = new RootDispatcher(dispatch);
 
   return (
     <Row>
@@ -38,10 +38,10 @@ const ReduxHooksComponent: React.FC<Props> = () => {
                 placeholder="name"
                 value={name}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                  rootDispatcher.updateName(e.target.value);
+                  dispatch(updateName(e.target.value));
                 }}
               />
-              <Button onClick={rootDispatcher.deleteName}>Delete name</Button>
+              <Button onClick={()=>dispatch(deleteName)}>Delete name</Button>
             </Form.Item>
             <Form.Item label="Address">
               <Input
@@ -49,10 +49,10 @@ const ReduxHooksComponent: React.FC<Props> = () => {
                 placeholder="address"
                 value={address}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => {
-                  rootDispatcher.updateAddress(e.target.value);
+                  dispatch(updateAddress(e.target.value));
                 }}
               />
-              <Button onClick={rootDispatcher.deleteAddress}>
+              <Button onClick={()=>dispatch(deleteAddress)}>
                 Delete address
               </Button>
             </Form.Item>

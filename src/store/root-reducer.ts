@@ -1,4 +1,4 @@
-import { Action, Reducer, Dispatch } from 'redux';
+import { Action, Reducer } from 'redux';
 
 export enum ActionType {
   UpdateName = 'UPDATE_NAME',
@@ -36,22 +36,3 @@ export const rootReducer: Reducer<InitialState, DispatchAction> = (
     return { ...state, address: action.payload.address || '' };
   } else return state;
 };
-
-export class RootDispatcher {
-  private readonly dispatch: Dispatch<DispatchAction>;
-
-  constructor(dispatch: Dispatch<DispatchAction>) {
-    this.dispatch = dispatch;
-  }
-  updateName = (name: string) =>
-    this.dispatch({ type: ActionType.UpdateName, payload: { name } });
-
-  updateAddress = (address: string) =>
-    this.dispatch({ type: ActionType.UpdateAddress, payload: { address } });
-
-  deleteName = () =>
-    this.dispatch({ type: ActionType.DeleteName, payload: {} });
-
-  deleteAddress = () =>
-    this.dispatch({ type: ActionType.DeleteAddress, payload: {} });
-}

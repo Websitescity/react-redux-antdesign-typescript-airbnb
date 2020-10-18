@@ -1,21 +1,11 @@
-import { Dispatch } from 'redux';
-import { DispatchAction, ActionType } from './root-reducer';
+import { ActionType } from './root-reducer';
 
-export class RootDispatcher {
-  private readonly dispatch: Dispatch<DispatchAction>;
+  const updateName = (name: string) => ({ type: ActionType.UpdateName, payload: { name } });
 
-  constructor(dispatch: Dispatch<DispatchAction>) {
-    this.dispatch = dispatch;
-  }
-  updateName = (name: string) =>
-    this.dispatch({ type: ActionType.UpdateName, payload: { name } });
+  const updateAddress = (address: string) =>({ type: ActionType.UpdateAddress, payload: { address } });
 
-  updateAddress = (address: string) =>
-    this.dispatch({ type: ActionType.UpdateAddress, payload: { address } });
+  const deleteName = () =>({ type: ActionType.DeleteName, payload: {} });
 
-  deleteName = () =>
-    this.dispatch({ type: ActionType.DeleteName, payload: {} });
+  const deleteAddress = () =>({ type: ActionType.DeleteAddress, payload: {} });
 
-  deleteAddress = () =>
-    this.dispatch({ type: ActionType.DeleteAddress, payload: {} });
-}
+  export {updateName, updateAddress, deleteName, deleteAddress}
