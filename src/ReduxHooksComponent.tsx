@@ -46,7 +46,9 @@ const ReduxHooksComponent: React.FC<Props> = () => {
                   dispatch(updateName(e.target.value));
                 }}
               />
-              <Button onClick={() => dispatch(deleteName)}>Delete name</Button>
+              <Button onClick={() => dispatch(deleteName())}>
+                Delete name
+              </Button>
             </Form.Item>
             <Form.Item label="Address">
               <Input
@@ -57,7 +59,7 @@ const ReduxHooksComponent: React.FC<Props> = () => {
                   dispatch(updateAddress(e.target.value));
                 }}
               />
-              <Button onClick={() => dispatch(deleteAddress)}>
+              <Button onClick={() => dispatch(deleteAddress())}>
                 Delete address
               </Button>
             </Form.Item>
