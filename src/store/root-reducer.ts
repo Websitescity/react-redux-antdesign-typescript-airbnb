@@ -25,7 +25,6 @@ export const rootReducer: Reducer<InitialState, DispatchAction> = (
   state = initialState,
   action
 ) => {
-  console.log(state);
   if (action.type === ActionType.UpdateName) {
     return { ...state, name: action.payload.name || "" };
   } else if (action.type === ActionType.DeleteName) {
